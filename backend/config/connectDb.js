@@ -4,7 +4,7 @@ require('dotenv').config();
 const connectDb = async () => {
     try{
         const conn  = await mongoose.connect(process.env.MONGO_URI);
-        console.log(`MongoDB created: ${conn.connection.host}`);
+        console.log(`MongoDB created: ${conn.connection.port}`);
     }
     catch(e){
         console.error(`Error: ${e.message}`);

@@ -2,7 +2,7 @@ const User = require('../models/User');
 
 const getAllUsers = async (req, res) => {
     try {
-        const users = await User.find();
+        const users = await User.find().select("-password");
         res.status(200).json(users);
     }
     catch (err) {
@@ -21,7 +21,7 @@ const changeUserRole = async (req, res) => {
     }
 
     try {
-        const user = await User.findByIdAndUpdate(id, { role }, { new: true, runValidator: true }).select('-password');
+        const user = await User.findByIdAndUpdate(id, { role }, { new: true, runValidators: true }).select('-password');
         if (!user) {
             return res.status(404).json({ message: 'User not found' });
         }
