@@ -2,6 +2,9 @@ const express = require('express');
 const connectDb = require('./config/connectDb');
 const cors = require('cors');
 const authRoutes = require('./routes/authRoutes');
+const categoryRoutes = require('./routes/categoryRoutes');
+const ticketRoutes = require('./routes/ticketRoutes');
+const userRoutes = require('./routes/userRoutes');
 
 require('dotenv').config();
 connectDb();
@@ -23,8 +26,10 @@ app.use(cors({
   credentials: true
 }));
 
-
 app.use('/api/auth', authRoutes);
+app.use('/api/category', categoryRoutes);
+app.use('/api/ticket', ticketRoutes);
+app.use('/api/user', userRoutes);
 
 app.get('/', (req, res)=> {
     res.json({message: 'backend is running...'});

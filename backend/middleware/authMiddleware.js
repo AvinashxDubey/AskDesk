@@ -1,7 +1,7 @@
 const jwt = require("jsonwebtoken");
-const User = require("../models.User");
+const User = require("../models/User");
 
-const authToken = async(req, res, next) => {
+const authMiddleware = async(req, res, next) => {
   const authHeader = req.headers.authorization;
   
   if (!authHeader || !authHeader.startsWith("Bearer ")) {
@@ -25,6 +25,4 @@ const authToken = async(req, res, next) => {
   }
 };
 
-
-
-module.exports = { authToken };
+module.exports = authMiddleware;
