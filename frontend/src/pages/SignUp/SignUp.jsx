@@ -79,7 +79,7 @@ const SignUp = () => {
                         </div>
                         {errors.password && <p className="error">{errors.password}</p>}
                     {formError && <p className="error">{formError}</p>}
-                    <button type="submit" className="btn center-btn">Sign Up</button>
+                    <button type="submit" className="auth-btn center-btn">Sign Up</button>
                     <p className="redirect_txt">Already have an account? <a href="/signin">Sign In</a></p>
                 </form>
             </main>

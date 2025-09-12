@@ -1,0 +1,29 @@
+.navbar-wrapper {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.nav {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+}
+
+.navLinks {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.navLink {
+    font-size: 0.9em;
+    color: gray;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
