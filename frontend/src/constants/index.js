@@ -8,4 +8,9 @@ export const eyeHide = eye_hide;
 export const eyeShow = eye_show; 
 export const askdeskLogo = askdesk_logo;
 
-export const navLists = ['Home', 'About us', 'Services', 'Contact'];
+export const navLists = [
+    { id: 1, label: 'Home', to: '/' },
+    { id: 2, label: 'About', to: '/about' },
+    { id: 3, label: 'Services', to: '/services' },
+    { id: 4, label: 'Contact', to: '/contact' }
+];

@@ -1,7 +1,7 @@
 import { useState } from "react"
-import { eyeHide, eyeShow } from "../../constants";
-import { useNavigate } from "react-router-dom";
-import { signUpUser } from "../../apis/auhtApi";
+import { useNavigate, Link } from "react-router-dom"
+import { eyeHide, eyeShow } from "../../constants"
+import { signUpUser } from "../../apis/auhtApi"
 import './SignUp.css'
 
 const SignUp = () => {
@@ -80,7 +80,7 @@ const SignUp = () => {
                         {errors.password && <p className="error">{errors.password}</p>}
                     {formError && <p className="error">{formError}</p>}
                     <button type="submit" className="auth-btn center-btn">Sign Up</button>
-                    <p className="redirect_txt">Already have an account? <a href="/signin">Sign In</a></p>
+                    <p className="redirect_txt">Already have an account? <Link to="/signin">Sign In</Link></p>
                 </form>
             </main>
         )

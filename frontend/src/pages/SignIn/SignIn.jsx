@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { Link } from "react-router-dom";
 import { eyeHide, eyeShow } from "../../constants";
 import { useNavigate } from "react-router-dom";
 import { signInUser } from "../../apis/auhtApi";
@@ -79,7 +80,7 @@ const SignIn = () => {
         {errors.password && <p className="error">{errors.password}</p>}
         {formError && <p className="error">{formError}</p>}
         <button type="submit" className="auth-btn center-btn" onClick={handleSubmit}>Sign In</button>
-        <p className="redirect_txt">Don't have an account? <a href="/signup">Sign Up</a></p>
+        <p className="redirect_txt">Don't have an account? <Link to="/signup">Sign Up</Link></p>
       </form>
     </main>
   )
